@@ -1,0 +1,16 @@
+log_data = """
+[2025-11-09 10:01:00] INFO: Iniciando treinamento...
+[2025-11-09 10:05:30] EPOCH 1/50 - loss: 0.45, accuracy: 0.88 - Execution Time: 270.50s
+[2025-11-09 10:10:02] EPOCH 2/50 - loss: 0.42, accuracy: 0.89 - Execution Time: 272.10s
+[2025-11-09 10:14:35] EPOCH 3/50 - loss: 0.40, accuracy: 0.90 - Execution Time: 273.05s
+[2025-11-09 10:19:05] EPOCH 4/50 - loss: 0.38, accuracy: 0.91 - Execution Time: 270.15s
+[2025-11-09 10:23:40] EPOCH 5/50 - loss: 0.37, accuracy: 0.91 - Execution Time: 275.20s
+[2025-11-09 10:23:41] INFO: Treinamento concluído.
+"""
+
+try:
+    with open("modelo.log", "w", encoding="utf-8") as f:
+        f.write(log_data.strip())
+    print("Arquivo 'modelo.log' de exemplo criado.")
+except IOError as e:
+    print(f"Erro ao criar arquivo de log: {e}")
